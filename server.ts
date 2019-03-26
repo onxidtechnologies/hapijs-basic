@@ -1,9 +1,7 @@
-'use strict';
-
-const Hapi=require('hapi');
+import {Server} from 'hapi';
 
 // Create a server with a host and port
-const server=Hapi.server({
+const server=Server({
     host:'localhost',
     port:8000
 });
