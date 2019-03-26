@@ -2,13 +2,21 @@
   "name": "hapijs-basic",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "build": "tsc && shx cp package.json dist",
+    "start": "npm run build && node dist",
+    "dev": "nodemon dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "hapi": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^11.11.7",
+    "shx": "^0.3.2",
+    "typescript": "^3.3.4000"
   }
 }
