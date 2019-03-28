@@ -2,7 +2,7 @@
   "name": "hapijs-basic",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "build": "tsc && shx cp package.json dist",
     "start": "npm run build && node dist",
@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^18.1.0"
+    "hapi": "^18.1.0",
+    "mongoose": "^5.4.20"
   },
   "devDependencies": {
     "@types/node": "^11.11.7",
