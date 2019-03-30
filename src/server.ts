@@ -1,5 +1,6 @@
 import { Server } from 'hapi';
 import * as mongoose from 'mongoose';
+import { UserController } from './controllers/UserController';
 
 export class APIServer {
     private server: Server;
@@ -35,6 +36,9 @@ export class APIServer {
                 return 'hello world';
             }
         });
+
+        const userController = new UserController();
+        this.server.route(userController.getRouteList());
 
         try {
             await this.server.start();
